@@ -98,7 +98,7 @@ public class BaseTest {
     void TearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();
-        wdm.quit();
+        //wdm.quit();
         //If a test has verification errors, fail the test
         String allverificationerrors = verificationerrors.toString(); //Convert the collected errors to a simple string
         if(!allverificationerrors.isEmpty()){ //If the string is not empty we have errors
