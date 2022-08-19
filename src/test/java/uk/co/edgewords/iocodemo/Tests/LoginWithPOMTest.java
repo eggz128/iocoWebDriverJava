@@ -37,6 +37,7 @@ public class LoginWithPOMTest extends BaseTest {
         //Check if we are logged in
         //MatcherAssert.assertThat("Alert present - login must have failed",login.loggedin(), is(true));
 
+        //A comment
         WebElement form = driver.findElement(By.id("Login"));
         var formsize = form.getRect();
         System.out.println(formsize.height);
@@ -45,9 +46,6 @@ public class LoginWithPOMTest extends BaseTest {
 
        boolean loggedin = login.doLoginExpectSuccess(username,password);
        TakeScreenshot(driver,"myscreenshot");
-
-
-
        MatcherAssert.assertThat("Not logged in",loggedin==true);
     }
 
